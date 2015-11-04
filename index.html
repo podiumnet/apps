@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Apps Installer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <div id="close">&#10006;</div>
+        <div class="maininfo">
+          <span class="title-nowrap">Apps Installer</span>
+        </div>
+      </header>
+      <div class="body" id="mainbod">
+        <input type="text" id="packagename" placeholder="Package Name">
+        <button id="install">Install</button>
+        <button id="uninstall">Uninstall</button>
+      </div>
+      <div class="body" id="installing">
+        <span>Please Wait</span>
+      </div>
+      <div class="body" id="error">
+        <span>Error!</span><button class="another">Back</button>
+      </div>
+      <div class="body" id="done">
+        <span>Done!</span><button class="another">Back</button>
+      </div>
+      <div id="about">About</div>
+    </div>
+    <script>
+      require("coffee-script/register");
+      require("./essential");
+      require("./app")
+    </script>
+  </body>
+</html>

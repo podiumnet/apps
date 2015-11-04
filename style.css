@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url(OpenSans-Regular.ttf);
+}
+body {
+  -webkit-user-select: none;
+  padding: 5px;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
+}
+.main-container {
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  height: 100%;
+  flex-direction: column;
+  background: rgba(255,255,255,0.8);
+  padding: 10px;
+  overflow-y: auto;
+  -webkit-app-region: drag;
+}
+header {
+  display: flex;
+  line-height: 30px;
+  height: 30px;
+
+}
+#close {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  text-align: center;
+}
+#close:active {
+  background: rgba(0,0,0,0.3);
+}
+.maininfo {
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+}
+.place {
+  color: #555;
+  border: none;
+  background: none;
+  font-size: inherit;
+  -webkit-app-region: no-drag;
+  outline: none;
+  margin-top: 3px;
+  margin-left: 5px;
+  overflow: hidden;
+  height: 30px;
+  text-align: right;
+  width: 50%;
+  -webkit-app-region: drag;
+}
+.body {
+  display: flex;
+  height: calc(100vh - 92px);
+  justify-content: center;
+  align-items: center;
+}
+#about {
+  font-size: 10px;
+  display: inline-block;
+  cursor: pointer;
+  color: #777;
+  -webkit-app-region: no-drag;
+}
+a {
+  -webkit-app-region: no-drag;
+  color: rgb(63, 80, 231);
+  text-decoration: none;
+}
+.extra-spaced {
+  padding: 20px;
+  display: block;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    margin: 20px;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    width: 5px;
+    background: #ccc;
+}
+.title-nowrap {
+  width: 50%;
+}
+input[type=text], button {
+  padding: 10px;
+  border: none;
+  -webkit-app-region: no-drag;
+  outline: none;
+  margin: 10px;
+}
+button {
+  background: #485df0;
+  color: #222;
+  font-weight: bold;
+}
+#done, #installing, #error {
+  display: none;
+}
